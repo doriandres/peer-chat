@@ -46,8 +46,8 @@ function connect() {
     });    
 }
 
-function sendMessage(hostConnection){
-    const message = chatTextInput.value;
+function sendMessage(hostConnection){    
+    const message = (chatTextInput.value || '').trim();
     if(!message) return;
     chatTextInput.value = "";
     hostConnection.send(JSON.stringify({
@@ -86,7 +86,3 @@ peer.on('open', () => {
         hostJoinButton.addEventListener('click', connect);
     }
 })
-
-// if(urlParams.get("code")){
-//     setTimeout(connect, 1000);    
-// }
