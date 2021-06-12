@@ -34,7 +34,7 @@ peer.on('connection', (guestConnection) => {
 });
 
 function sendMessage() {
-    const message = chatTextInput.value;
+    const message = (chatTextInput.value || '').trim();
     if (!message) return;
     chatTextInput.value = "";
     addMessage({
