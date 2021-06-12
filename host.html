@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Host</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: black;
+        }
+        input[type=text], textarea{
+            min-width: 200px;
+            padding: 5px;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="host.js" defer></script>
+</head>
+
+<body>
+    <p id="host-id">Generating Room Code...</p>
+    <p>
+        <input type="text" id="chat-name" placeholder="Chat Name: Anonymous">
+        <input type="color" value="#ffffff" id="chat-color">
+    </p>
+    <p>
+        <textarea type="text" placeholder="Type something to send..." id="chat-text"></textarea>
+        <button id="chat-send">Send</button>
+    </p>
+    <p id="chat-content"></p>
+</body>
+
+</html>
